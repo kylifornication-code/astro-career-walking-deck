@@ -84,8 +84,6 @@ A brief overview of the project structure:
 - **Performance**: Use modern web development practices to ensure optimal performance, such as lazy loading images and minimizing CSS/JS.
 - **Responsive Design**: Make sure your portfolio looks good on devices of all sizes, from mobile to desktop screens.
 
-This project use Contentful to fetch data from the API. and load your projects section, if you want to use your contentful data add variables to your .env file.
-
 ## Contributions
 
 Contributions are welcome! If you have ideas or improvements, please open an issue or submit a pull request.
