@@ -1,15 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import IntroCard from '../components/sections/IntroCard.astro'
-import AboutMe from '../components/sections/AboutMe.astro'
 import Card from '../components/Card.astro'
-import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
-import ContactsCard from '../components/sections/ContactsCard.astro'
-import Now from '../components/sections/Now.astro'
+import ValuesCard from '../components/sections/ValuesCard.astro'
+import AspirationsCard from '../components/sections/AspirationsCard.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
-import TattooCard from '../components/sections/TattooCard.astro'
+import InterestsCard from '../components/sections/InterestsCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
+import StretchingCard from '../components/sections/StretchingCard.astro'
+import PersonalityCard from '../components/sections/PersonalityCard.astro'
 ---
 
 <script>
@@ -36,8 +36,8 @@ import StudyCard from '../components/sections/StudyCard.astro'
 </script>
 
 <BaseLayout
-  title="Andrés Plaza - Full Stack Developer"
-  description="Andrés Plaza - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
+  title="Kyle James's (KJ) Career Walking Site"
+  description="Career Walking Site to go over highlights"
 >
   <div
     slot="loader"
@@ -45,39 +45,16 @@ import StudyCard from '../components/sections/StudyCard.astro'
   >
   </div>
   <main
-    class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-8 lg:gap-4"
+    class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-10 lg:gap-4"
   >
     <IntroCard />
-    <AboutMe />
     <CVCard />
-    <Now />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-2"
-      title="Portfolio & Projects"
-      href="/portfolio"
-    />
-    <TimeZoneCard />
-    <ContactsCard />
+    <InterestsCard />
     <ExperienceCard />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <div class="flex h-full flex-col justify-between">
-        <blockquote class="mt-6 border-l-2 pl-6 italic">
-          “Anything one man can imagine, other men can make real.”
-        </blockquote>
-        <p class="mt-2 text-xs">- Jules Verne</p>
-      </div>
-    </Card>
-    <TattooCard />
+    <ValuesCard />
+    <PersonalityCard />
+    <AspirationsCard />
     <StudyCard />
-    <!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2023 · Crafted with ♥️ using <a
-          href="https://astro.build/"
-          target="_blank"
-          class="text-red-500">Astro</a
-        > by Gianmarco.
-      </p>
-    </Card> -->
+    <StretchingCard />
   </main>
 </BaseLayout>
