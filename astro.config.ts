@@ -4,7 +4,11 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-  site: import.meta.env.PUBLIC_SITE_URL || 'http://localhost:4321',
+  // For GitHub Pages: if your repo is named `username.github.io`, use `/`
+  // Otherwise, use `/<repository-name>/`
+  // This can be overridden by the BASE_URL environment variable during build
+  base: process.env.BASE_URL || '/',
+  site: process.env.PUBLIC_SITE_URL || 'http://localhost:4321',
   integrations: [
     react(),
     tailwind({
