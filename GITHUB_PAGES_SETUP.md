@@ -10,17 +10,15 @@ This repository is configured to automatically deploy to GitHub Pages when you p
    - Under **Source**, select **GitHub Actions**
    - Save the changes
 
-2. **Configure the Base URL (if needed):**
+2. **Base URL Configuration:**
    
-   **If your repository is named `username.github.io`** (user/organization page):
-   - No action needed - the default base URL `/` will work
+   ✅ **Automatic Configuration**: The workflow automatically detects your repository name and sets the correct `BASE_URL`:
+   - If your repo is `username.github.io` → uses `/`
+   - Otherwise → uses `/<repository-name>/`
    
-   **If your repository has a different name** (project page):
-   - Go to **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - Name: `BASE_URL`
-   - Value: `/<repository-name>/` (e.g., `/astro-portfolio/`)
-   - Click **Add secret**
+   **Manual Override (optional):**
+   - If you need to override the automatic detection, go to **Settings** → **Secrets and variables** → **Actions**
+   - Add secret: `BASE_URL` with your custom value
 
 3. **Optional: Set Custom Site URL:**
    - If you want to set a custom `PUBLIC_SITE_URL`, add it as a secret:
@@ -43,9 +41,9 @@ You can also trigger a manual deployment:
 
 ## Troubleshooting
 
-- **404 errors**: Make sure `BASE_URL` is set correctly if your repo isn't named `username.github.io`
+- **404 errors**: The workflow automatically sets `BASE_URL` based on your repository name. If you see 404s, check that GitHub Pages is enabled and the deployment completed successfully.
+- **Assets not loading / No styling**: This usually means the `BASE_URL` wasn't set correctly during build. The workflow now auto-detects this, but you can verify in the Actions logs that `BASE_URL is: /<your-repo-name>/` appears in the build step.
 - **Build failures**: Check the **Actions** tab for error messages
-- **Assets not loading**: Verify the `base` setting in `astro.config.ts` matches your `BASE_URL`
 
 ## Local Testing
 

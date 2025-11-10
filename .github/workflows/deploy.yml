@@ -35,13 +35,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Set BASE_URL
+        id: base_url
+        run: |
+          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          if [ "$REPO_NAME" = "${{ github.repository_owner }}.github.io" ]; then
+            echo "BASE_URL=/" >> $GITHUB_ENV
+          else
+            echo "BASE_URL=/$REPO_NAME/" >> $GITHUB_ENV
+          fi
+          echo "BASE_URL is: $BASE_URL"
+
       - name: Build with Astro
         run: pnpm build
         env:
-          # If your repository is named `username.github.io`, set BASE_URL to `/`
-          # Otherwise, set BASE_URL to `/<repository-name>/`
-          # You can set BASE_URL and PUBLIC_SITE_URL as GitHub secrets if needed
-          BASE_URL: ${{ secrets.BASE_URL || '/' }}
+          # BASE_URL is set in the previous step
+          # PUBLIC_SITE_URL can be overridden via GitHub secret if needed
           PUBLIC_SITE_URL: ${{ secrets.PUBLIC_SITE_URL || '' }}
 
       - name: Setup Pages
