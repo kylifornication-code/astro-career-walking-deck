@@ -40,17 +40,20 @@ jobs:
         run: |
           REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
           if [ "$REPO_NAME" = "${{ github.repository_owner }}.github.io" ]; then
-            echo "BASE_URL=/" >> $GITHUB_ENV
+            BASE_PATH="/"
           else
-            echo "BASE_URL=/$REPO_NAME/" >> $GITHUB_ENV
+            BASE_PATH="/$REPO_NAME/"
           fi
-          echo "BASE_URL is: $BASE_URL"
+          echo "BASE_URL=$BASE_PATH" >> $GITHUB_ENV
+          echo "BASE_URL=$BASE_PATH" >> $GITHUB_OUTPUT
+          echo "Setting BASE_URL to: $BASE_PATH"
 
       - name: Build with Astro
         run: pnpm build
         env:
-          # BASE_URL is set in the previous step
-          # PUBLIC_SITE_URL can be overridden via GitHub secret if needed
+          # BASE_URL is automatically available from GITHUB_ENV set in previous step
+          # Can be overridden via GitHub secret if needed (set BASE_URL secret to override)
+          # PUBLIC_SITE_URL can be set as a secret if needed
           PUBLIC_SITE_URL: ${{ secrets.PUBLIC_SITE_URL || '' }}
 
       - name: Setup Pages
