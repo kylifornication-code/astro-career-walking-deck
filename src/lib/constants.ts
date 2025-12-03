@@ -8,6 +8,7 @@ export const loaderAnimation = [
 
 export const LINKS = {
   gitlab: 'https://gitlab.com/kylifornication',
+  github: 'https://github.com/kylifornication-code',
   linkedin: 'https://www.linkedin.com/in/kylejamescwu/',
   mail: 'mailto:kyleroyjames@gmail.com',
   instagram: 'https://www.instagram.com/caj_ink/',
