@@ -26,6 +26,7 @@ This creates:
 | AspirationsCard | 2 cols | 3 cols | 1 row |
 | StudyCard | 2 cols | 1 col | 1 row |
 | StretchingCard | 2 cols | 3 cols | 1 row |
+| ProudOfCard | 2 cols | 4 cols | 2 rows |
 
 ## How CSS Grid Works
 
@@ -219,6 +220,7 @@ Row 2: [CVCard - 1 col] [InterestsCard - 3 cols]
 Row 3: [ExperienceCard - 1 col] [ValuesCard - 3 cols]
 Row 4: [PersonalityCard - 1 col] [AspirationsCard - 3 cols]
 Row 5: [StudyCard - 1 col] [StretchingCard - 3 cols]
+Row 6: [ProudOfCard - 4 cols]
 ```
 
 ### Issues/Considerations
@@ -228,7 +230,7 @@ Row 5: [StudyCard - 1 col] [StretchingCard - 3 cols]
    - Wide short cards (3 col cards)
    - Height mismatch causing white space
 
-2. **Grid Rows:** You have `lg:grid-rows-10` but only need ~5 rows with current layout
+2. **Grid Rows:** You have `lg:grid-rows-10` but only need ~6 rows with current layout
    - Can reduce to `lg:grid-rows-6` or remove entirely
 
 3. **Visual Balance:** Consider making row heights match content:

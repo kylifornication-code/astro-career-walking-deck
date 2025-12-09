@@ -28,6 +28,7 @@ The site includes the following sections:
 - **Aspirations Card**: Future goals and dreams
 - **Study Card**: Educational background
 - **Stretching Card**: Mentoring and professional development activities
+- **Proud Of Card**: Personal achievements and accomplishments
 
 ## 🛠️ Technologies Used
 
