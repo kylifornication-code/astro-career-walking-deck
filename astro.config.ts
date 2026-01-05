@@ -15,4 +15,10 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  vite: {
+    build: {
+      // Disable sourcemaps in production to prevent source code exposure
+      sourcemap: false,
+    },
+  },
 })
