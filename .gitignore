@@ -5,6 +5,8 @@ dist/
 .astro/
 .vscode/
 .goose_scan/
+.cursor/*
+
 
 # dependencies
 node_modules/
