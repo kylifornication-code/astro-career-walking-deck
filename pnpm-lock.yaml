@@ -16,7 +16,7 @@ overrides:
   micromatch: ^4.0.8
   nanoid: ^3.3.8
   prismjs: ^1.30.0
-  vite: ^6.4.1
+  vite: ^6.4.2
   cross-spawn: ^7.0.5
   devalue: ^5.3.2
   dset: ^3.1.4
@@ -165,11 +165,11 @@ packages:
     dependencies:
       '@types/react': 18.3.27
       '@types/react-dom': 18.3.7(@types/react@18.3.27)
-      '@vitejs/plugin-react': 4.7.0(vite@6.4.1)
+      '@vitejs/plugin-react': 4.7.0(vite@6.4.2)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.6.0
-      vite: 6.4.1(@types/node@20.19.27)
+      vite: 6.4.2(@types/node@20.19.27)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -2030,11 +2030,11 @@ packages:
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
     dev: false
 
-  /@vitejs/plugin-react@4.7.0(vite@6.4.1):
+  /@vitejs/plugin-react@4.7.0(vite@6.4.2):
     resolution: {integrity: sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^6.4.1
+      vite: ^6.4.2
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5)
@@ -2042,7 +2042,7 @@ packages:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 6.4.1(@types/node@20.19.27)
+      vite: 6.4.2(@types/node@20.19.27)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2170,8 +2170,8 @@ packages:
       unist-util-visit: 5.1.0
       unstorage: 1.17.5
       vfile: 6.0.3
-      vite: 6.4.1(@types/node@20.19.27)
-      vitefu: 1.1.2(vite@6.4.1)
+      vite: 6.4.2(@types/node@20.19.27)
+      vitefu: 1.1.2(vite@6.4.2)
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -4728,8 +4728,8 @@ packages:
       vfile-message: 4.0.3
     dev: false
 
-  /vite@6.4.1(@types/node@20.19.27):
-    resolution: {integrity: sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==}
+  /vite@6.4.2(@types/node@20.19.27):
+    resolution: {integrity: sha512-2N/55r4JDJ4gdrCvGgINMy+HH3iRpNIz8K6SFwVsA+JbQScLiC+clmAxBgwiSPgcG9U15QmvqCGWzMbqda5zGQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -4779,15 +4779,15 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vitefu@1.1.2(vite@6.4.1):
+  /vitefu@1.1.2(vite@6.4.2):
     resolution: {integrity: sha512-zpKATdUbzbsycPFBN71nS2uzBUQiVnFoOrr2rvqv34S1lcAgMKKkjWleLGeiJlZ8lwCXvtWaRn7R3ZC16SYRuw==}
     peerDependencies:
-      vite: ^6.4.1
+      vite: ^6.4.2
     peerDependenciesMeta:
       vite:
         optional: true
     dependencies:
-      vite: 6.4.1(@types/node@20.19.27)
+      vite: 6.4.2(@types/node@20.19.27)
     dev: false
 
   /web-namespaces@2.0.1:
